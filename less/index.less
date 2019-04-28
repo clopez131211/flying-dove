@@ -1,36 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+@import url('https://fonts.googleapis.com/css?family=Cabin');
 @import './about.less';
 @import './contact.less';
 @import './menu.less';
+@import './mixins.less';
+@import './button.less';
+
+body
+{
+    margin: 0;
+}
 
 .home-cont
 {
     width: 100%;
-   box-sizing: border-box;
    margin: 0;
+}
+
+.title h1{
+    font-size: 6rem;
+    font-family: 'Dancing Script', cursive;
+    margin-top: 8px;
+    color: @title-color;
+    text-shadow: 2px 2px 5px;
 }
 .nav-cont
 {
-    border: 1px solid blue;
+    background: @nav-background;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
 
     height: 200px;   
 }
+.nav-cont .nav-top
+  {
+      width: 100%;
+      background: @nav-background;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 50px 0px;
+  }
 
 .nav ul {
   display: flex;
   flex-direction: row;
-  border: 1px solid yellow;
   list-style-type: none;
   margin: 0px;
-  padding: 20px;
+  padding: 50px;
   overflow: hidden;
 
   li{
-      border: 1px black solid;
       margin: 15px;
   }
+}
+
+.nav li a{
+    font-size: 2rem;
+    font-family: "Cabin", Arial, Helvetica, sans-serif
 }
 
 .nav li a, .dropbtn {
@@ -62,7 +91,11 @@
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    text-align: left;
+    text-align: center;
+  }
+
+  .dropdown-content p{
+      font-size: 14px;
   }
   
   .nav .dropdown-content a:hover {background-color: #f1f1f1;}
@@ -71,19 +104,12 @@
     display: block;
   }
 
-  .nav-cont .nav-top
-  {
-      border: 1px solid black;
-      width: 45.5%;
-      display: flex;
-      justify-content: center;
-      padding: 40px 50px;
-  }
 
   .slideshow {
     width: 100%;
     position: relative;
     margin: auto;
+    background-image: url("../img/wood.jpg");
   }
   
   
@@ -130,21 +156,18 @@
   }
   
   /* On smaller screens, decrease text size */
-  @media only screen and (max-width: 300px) {
-    .text {font-size: 11px}
-  }
 
 .mid-content
 {
+    background-image: url("../img/wood.jpg");
+    padding: 300px;
     display: flex;
     flex-flow: row;
-    border: 1px solid black;
     box-sizing: border-box;
 }
 .mid-content .about
 {
     width: 100%;
-    border: 1px solid black;
     display: flex;
     flex-flow: row;
     box-sizing: border-box;
@@ -153,11 +176,29 @@
 }
 .mid-content .about .text
 {
+    background: #FF9019;
     justify-content: flex-end;
     max-width: 900px;
+    color: @mid-text-color;
+    font-family: 'Exo 2', sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15px;
+}
+
+.mid-content .greece
+{
+    width: 75%;
 }
   .mid-content h2{
-    font-size: 6rem;
+    font-size: 7rem;
+    font-family: 'Dancing Script', cursive;
+    color: @mid-text-color;
+    text-shadow: 2px 2px 5px;
+}
+.mid-content .chef
+{
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .mid-content p{
@@ -167,34 +208,47 @@
 
 .reservation
 {
+    margin: 100px;
     display: flex;
     justify-content: center;
     padding-top: 50px;
     width: 100%;
-    height: 100px;
 
 }
-
-.reservation button{
-    width: 45%;
-    height: 50px;
-
-}
-
-
 .contact
 {
-    border-top: 1px solid black;
+    text-align: center;
+    padding: 60px 0 50px 0;
+    border-top: 1px solid white;
+    background: #262526;
+    h4{
+        color: #919191;
+    }
+    p
+    {
+        color: #919191;
+    }
     
+}
+footer{
+    color: #919191;
 }
 
 .bot-pics
 {
-    width: 90%;
+    margin-top: 500px;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
 
+.bot-pics img{
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
-
-
+.bot-cont
+{
+    padding: 300px;
+    background-image: url("../img/wood.jpg");
+}

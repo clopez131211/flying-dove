@@ -16,6 +16,154 @@
   font-weight: 400;
   src: local('Cabin'), local('Cabin-Regular'), url(https://fonts.gstatic.com/s/cabin/v13/u-4x0qWljRw-Pd8w__g.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'Indie Flower';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Indie Flower'), local('IndieFlower'), url(https://fonts.gstatic.com/s/indieflower/v10/m8JVjfNVeKWVnh3QMuKkFcZVaUuC.ttf) format('truetype');
+}
+.content-section {
+  margin: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .content-section {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+  }
+}
+.content-section .text-content {
+  width: 48%;
+  padding-right: 1%;
+  font-family: 'Indie Flower', cursive;
+}
+@media (max-width: 500px) {
+  .content-section .text-content {
+    padding-top: 20px;
+    width: 100%;
+  }
+}
+.content-section .img-content {
+  width: 48%;
+  padding-left: 1%;
+}
+@media (max-width: 500px) {
+  .content-section .img-content {
+    width: 100%;
+    padding: 0px;
+  }
+}
+.content-section .img-content img {
+  border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .content-section .img-content img {
+    width: 100%;
+  }
+}
+.inverse-content {
+  padding-bottom: 30px;
+  border-bottom: 2px dashed #C0C0C0;
+  font-family: 'Indie Flower', cursive;
+}
+@media (max-width: 500px) {
+  .inverse-content {
+    flex-direction: column-reverse;
+  }
+}
+.inverse-content .text-content {
+  padding-left: 1%;
+  padding-right: 0;
+  font-family: 'Indie Flower', cursive;
+}
+.inverse-content .img-content {
+  padding-right: 1%;
+  padding-left: 0;
+}
+.content-destination {
+  width: 75%;
+  margin: 0 auto 30px;
+  font-family: 'Indie Flower', cursive;
+}
+@media (max-width: 500px) {
+  .content-destination {
+    width: 100%;
+    padding-top: 20px;
+  }
+}
+.content-destination img {
+  border-radius: 10px;
+}
+.content-pick {
+  padding-top: 30px;
+  border-top: 2px dashed #C0C0C0;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Indie Flower', cursive;
+}
+@media (max-width: 500px) {
+  .content-pick {
+    flex-direction: column;
+    width: 100%;
+    padding: 30px 30px 0px;
+  }
+}
+.content-pick .destination {
+  width: 30%;
+  margin-bottom: 30px;
+  font-family: 'Indie Flower', cursive;
+}
+@media (max-width: 500px) {
+  .content-pick .destination {
+    width: 100%;
+  }
+}
+header {
+  border-bottom: 2px dashed grey;
+}
+@media (max-width: 500px) {
+}
+.container.home {
+  padding: 0px 50px 20px;
+}
+@media (max-width: 500px) {
+  .container.home {
+    padding: 0px 20px 0px;
+    flex-direction: column;
+  }
+}
+.btn {
+  background-color: #17A2B8;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  border-radius: 50px;
+  font-family: 'Indie Flower', cursive;
+}
+@media (max-width: 500px) {
+  .btn {
+    height: 35px;
+    padding-top: 5px;
+    margin: 0px;
+  }
+}
+.mid-cont {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+.container-home {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
 .reservation button {
   background: black;
   color: #fff;
@@ -56,11 +204,137 @@ button:hover:after {
   width: 100%;
   transition: 800ms ease all;
 }
-body {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 .home-cont {
-  width: 100%;
+  box-sizing: border-box;
+  min-width: 300px;
   margin: 0;
 }
 .title h1 {
@@ -192,39 +466,36 @@ body {
 /* On smaller screens, decrease text size */
 .mid-content {
   background-image: url("../img/wood.jpg");
-  padding: 300px;
-  display: flex;
-  flex-flow: row;
-  box-sizing: border-box;
+  padding: 500px 100px 0 100px;
 }
 .mid-content .about {
-  width: 100%;
   display: flex;
-  flex-flow: row;
-  box-sizing: border-box;
   justify-content: space-between;
 }
 .mid-content .about .text {
   background: #FF9019;
   justify-content: flex-end;
-  max-width: 900px;
+  max-width: 800px;
   color: #eff0eb;
   font-family: 'Exo 2', sans-serif;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 15px;
 }
 .mid-content .greece {
-  width: 75%;
+  width: 80%;
 }
 .mid-content h2 {
+  margin: 50px 0 50px 0;
   font-size: 7rem;
   font-family: 'Dancing Script', cursive;
   color: #eff0eb;
   text-shadow: 2px 2px 5px;
 }
 .mid-content .chef {
+  max-width: 800px;
   border-radius: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-left: 20px;
 }
 .mid-content p {
   font-size: 18px;

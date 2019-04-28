@@ -6,16 +6,14 @@
 @import './menu.less';
 @import './mixins.less';
 @import './button.less';
-
-body
-{
-    margin: 0;
-}
+@import './variables.less';
+@import './reset.less';
 
 .home-cont
 {
-    width: 100%;
-   margin: 0;
+  box-sizing: border-box;
+  min-width: 300px;
+  margin: 0;
 }
 
 .title h1{
@@ -156,21 +154,14 @@ body
   }
   
   /* On smaller screens, decrease text size */
-
 .mid-content
 {
     background-image: url("../img/wood.jpg");
-    padding: 300px;
-    display: flex;
-    flex-flow: row;
-    box-sizing: border-box;
+    padding: 500px 100px 0 100px;
 }
 .mid-content .about
 {
-    width: 100%;
     display: flex;
-    flex-flow: row;
-    box-sizing: border-box;
     justify-content: space-between;
 
 }
@@ -178,7 +169,7 @@ body
 {
     background: #FF9019;
     justify-content: flex-end;
-    max-width: 900px;
+    max-width: 800px;
     color: @mid-text-color;
     font-family: 'Exo 2', sans-serif;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -187,9 +178,10 @@ body
 
 .mid-content .greece
 {
-    width: 75%;
+    width: 80%;
 }
   .mid-content h2{
+    margin: 50px 0 50px 0;
     font-size: 7rem;
     font-family: 'Dancing Script', cursive;
     color: @mid-text-color;
@@ -197,8 +189,10 @@ body
 }
 .mid-content .chef
 {
+  max-width: 800px;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 20px;
 }
 
 .mid-content p{

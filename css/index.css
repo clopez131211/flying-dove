@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 @font-face {
   font-family: 'Dancing Script';
   font-style: normal;
@@ -583,6 +588,12 @@ table {
   min-width: 300px;
   margin: 0;
 }
+@media (max-width: 500px) {
+  .home-cont {
+    box-sizing: border-box;
+    width: fit-content;
+  }
+}
 .title h1 {
   font-size: 6rem;
   font-family: 'Dancing Script', cursive;
@@ -597,14 +608,19 @@ table {
   flex-direction: row;
   height: 200px;
 }
+@media (max-width: 500px) {
+  .nav-cont {
+    display: flex;
+  }
+}
 .nav-cont .nav-top {
   box-sizing: border-box;
   width: 100%;
+  height: 70px;
   background: #FDF5F3;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: baseline;
+  justify-content: center;
+  align-items: center;
 }
 .nav ul {
   display: flex;
@@ -712,6 +728,12 @@ table {
   background-image: url("../img/wood.jpg");
   padding: 500px 100px 0 100px;
 }
+@media (max-width: 500px) {
+  .mid-content {
+    display: flex;
+    align-content: center;
+  }
+}
 .mid-content .about {
   display: flex;
   justify-content: space-between;
@@ -740,6 +762,11 @@ table {
   border-radius: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-left: 20px;
+}
+@media (max-width: 500px) {
+  .mid-content .chef {
+    display: none;
+  }
 }
 .mid-content p {
   font-size: 18px;
@@ -773,6 +800,11 @@ footer {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+@media (max-width: 500px) {
+  .bot-pics {
+    flex-direction: column;
+  }
 }
 .bot-pics img {
   border-radius: 15px;
